@@ -1,0 +1,33 @@
+h1 {
+  color: var(--primary-color);
+}
+
+.first-title {
+  color: grey;
+}
+
+li {
+  padding-bottom: 1rem;
+}
+
+.odd {
+  background-color: rgb(83, 83, 83);
+}
+
+.even {
+  background-color: rgb(31, 0, 42);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(46, 46, 46);
+}

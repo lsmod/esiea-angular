@@ -1,0 +1,19 @@
+<header>
+  <h1>My store</h1>
+  <button>checkout</button>
+</header>
+
+<main>
+  <ul>
+    <li
+      [ngClass]="i % 2 == 1 ? 'odd' : 'even'"
+      *ngFor="let product of products; let i = index"
+    >
+      <product-item [item]="product" (onSelect)="clickOnItem($event)" />
+    </li>
+  </ul>
+
+  <footer>
+    {{ footerText }}
+  </footer>
+</main>

@@ -1,0 +1,14 @@
+h1 {
+  color: var(--primary-color);
+}
+
+.first-title {
+  color: grey;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
