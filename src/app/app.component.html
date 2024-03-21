@@ -6,6 +6,8 @@
 <main>
   <search-input [(query)]="searchParam" />
 
+  <input [(ngModel)]="searchParam" />
+
   <ul>
     <li
       [ngClass]="i % 2 == 1 ? 'odd' : 'even'"
