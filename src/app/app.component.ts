@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   footerText = '';
+  searchParam = 'keyboard';
+
   clickOnItem(productEvent: any) {
     for (const item of this.products) {
       if (productEvent.id === item.id) {

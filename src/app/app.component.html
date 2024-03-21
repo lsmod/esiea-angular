@@ -1,9 +1,11 @@
 <header>
   <h1>My store</h1>
+  <span *ngIf="searchParam">searching: {{ searchParam }}</span>
   <button>checkout</button>
 </header>
-
 <main>
+  <search-input [query]="searchParam" (onChange)="searchParam = $event" />
+
   <ul>
     <li
       [ngClass]="i % 2 == 1 ? 'odd' : 'even'"
