@@ -4,7 +4,9 @@
   <button>checkout</button>
 </header>
 <main>
-  <search-input [query]="searchParam" (onChange)="searchParam = $event" />
+  <search-input [(query)]="searchParam" />
+
+  <!-- <twoway-search-input [(query)]="searchParam" /> -->
 
   <ul>
     <li
