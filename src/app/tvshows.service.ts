@@ -8,6 +8,8 @@ export class TvshowsService {
   private tvShows = hardcodedTvShow;
 
   getTvShow() {
+    // TODO: make an API call instead of returning hardcoded array
+    // (GET https://api.tvmaze.com/shows)
     return this.tvShows;
   }
 }
