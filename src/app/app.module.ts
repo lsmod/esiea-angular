@@ -3,11 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CounterComponent } from './components/counter/counter.component';
+import { TvShowItemComponent } from './tv-show-item/tv-show-item.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, CounterComponent],
+  declarations: [AppComponent, TvShowItemComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

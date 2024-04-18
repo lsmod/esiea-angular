@@ -1,28 +1,9 @@
-<!-- <h1>Hello {{ displayName() }}!</h1>
+<h1>Netflix</h1>
 
-<button (click)="displayName()">{{ buttonText }}</button>
-<br />
-<input type="text" [value]="name" [disabled]="isEmailEnabled" /> -->
+<h2>Tv-Shows:</h2>
 
-<app-navbar></app-navbar>
-
-<app-counter [(count)]="initialCount" />
-<br />
-
-<span [ngStyle]="initialCountStyle"> initialCount </span>
-
-: {{ initialCount }}
-
-<div *ngIf="initialCount >= 18"><p>Majeur ?!</p></div>
-
-<div
-  [ngClass]="i % 2 === 1 ? 'even' : 'odd'"
-  *ngFor="let country of countries; let i = index"
->
-  {{ country }} {{ i }}
-</div>
-
-<div [ngSwitch]="selectedCountry">
-  <div *ngSwitchCase="'fr'">salut!</div>
-  <div *ngSwitchCase="'be'">hello!</div>
-</div>
+<ul>
+  <li *ngFor="let show of tvShows">
+    <app-tv-show-item [tvShow]="show"></app-tv-show-item>
+  </li>
+</ul>
