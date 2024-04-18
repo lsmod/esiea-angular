@@ -8,7 +8,8 @@ import { TvshowsService } from './tvshows.service';
 })
 export class AppComponent implements OnInit {
   tvShows: any[] = [];
-  constructor(private readonly service: TvshowsService) {}
+
+  constructor(public readonly service: TvshowsService) {}
 
   ngOnInit(): void {
     this.tvShows = this.service.getTvShows();
