@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class TvShowDetailComponent implements OnInit {
   // service.getTvShowById(id)
   tvShow: any;
+  seasons: any[] = [];
 
   constructor(
     private readonly tvShowService: TvshowsService,
@@ -18,7 +19,7 @@ export class TvShowDetailComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
-    console.log('id', id);
     this.tvShow = this.tvShowService.getTvShowById(Number(id));
+    this.seasons = this.tvShowService.getSeasons(Number(id));
   }
 }

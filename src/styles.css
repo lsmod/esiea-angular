@@ -9,7 +9,11 @@
   --primary-color: blueviolet;
 }
 
+html,
 body {
-  background-color: black;
-  color: white;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

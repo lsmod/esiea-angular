@@ -1,0 +1,8 @@
+<h1>{{ tvShow.name }} - Saison {{ seasonNumber }}</h1>
+
+<ul>
+  <li *ngFor="let episode of espiodes">
+    <div>episode {{ episode.number }}: {{ episode.name }}</div>
+    <img [src]="episode.image.medium" />
+  </li>
+</ul>

@@ -1,0 +1,19 @@
+.example-card {
+  max-width: 400px;
+}
+
+mat-card-title {
+  color: black;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.summary {
+  white-space: nowrap;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  text-overflow: fade(5%);
+  max-width: 250px;
+}

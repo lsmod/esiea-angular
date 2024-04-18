@@ -22,6 +22,10 @@ export class TvshowsService {
     return seasons;
   }
 
+  getSeasonById(seasonId: number) {
+    return seasons.find((season) => season.id === seasonId);
+  }
+
   getEpisodes(tvShowId: number, seasonNumber: number) {
     // TODO: make an API call instead of returning hardcoded array
     // (GET https://api.tvmaze.com/seasons/1/episodes)

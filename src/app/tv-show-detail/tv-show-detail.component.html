@@ -1,3 +1,9 @@
 <H1>{{ tvShow.name }}</H1>
 <img [src]="tvShow.image.medium" alt="{{ tvShow.name }}" />
-<p>{{ tvShow.summary }}</p>
+<p [innerHTML]="tvShow.summary"></p>
+
+<div *ngFor="let season of seasons">
+  <a routerLink="/tvshow-details/{{ tvShow.id }}/season/{{ season.id }}">
+    <img [src]="season.image.medium" />
+  </a>
+</div>
