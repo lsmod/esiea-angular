@@ -11,6 +11,6 @@ export class AppComponent implements OnInit {
   constructor(private readonly service: TvshowsService) {}
 
   ngOnInit(): void {
-    this.tvShows = this.service.getTvShow();
+    this.tvShows = this.service.getTvShows();
   }
 }
