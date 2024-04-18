@@ -1,5 +1,8 @@
-<div style="display: flex" (click)="onClick()">
-  <h3>{{ tvShow.name }}</h3>
-  <span>- {{ tvShow.rating.average }}</span>
-  {{ tvShow.genres }}
-</div>
+<a routerLink="/tshow-details/{{ tvShow.id }}">
+  <!-- <img [src]="tvShow.image.medium" alt="{{ tvShow.name }}" /> -->
+  <div style="display: flex" (click)="onClick()">
+    <h3>{{ tvShow.name }}</h3>
+    <span>- {{ tvShow.rating.average }}</span>
+    {{ tvShow.genres }}
+  </div>
+</a>

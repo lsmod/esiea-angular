@@ -14,11 +14,20 @@ export class TvshowsService {
     return this.tvShows;
   }
 
+  getTvShowById(id: number) {
+    for (const show of this.tvShows) {
+      if (show.id === id) {
+        return show;
+      }
+    }
+    return null;
+  }
+
   getSelectedTvShow() {
     return this.getSelectedTvShow;
   }
 
-  setSelectShow(show: any) {
+  setSelectedShow(show: any) {
     this.selectedTvShow = show;
   }
 }

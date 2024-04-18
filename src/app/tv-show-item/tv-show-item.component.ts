@@ -12,6 +12,6 @@ export class TvShowItemComponent {
   constructor(private readonly tvShowService: TvshowsService) {}
 
   onClick() {
-    this.tvShowService.setSelectShow(this.tvShow);
+    this.tvShowService.setSelectedShow(this.tvShow);
   }
 }
