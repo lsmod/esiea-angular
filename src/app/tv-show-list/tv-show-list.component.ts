@@ -14,6 +14,7 @@ export class TvShowListComponent implements OnInit, OnDestroy {
   interval: any;
   loading = true;
   newTitle = 'nouveau';
+  newDescription = 'blabla';
 
   constructor(public readonly service: TvshowsService) {}
 
@@ -31,6 +32,7 @@ export class TvShowListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    console.log('newDescription', this.newDescription);
     console.log('ngOnDestroy');
     clearInterval(this.interval);
   }
