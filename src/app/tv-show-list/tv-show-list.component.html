@@ -4,8 +4,11 @@
 <app-new-show-preview [title]="newTitle" />
 <input [(ngModel)]="newDescription" />
 
-<h3>add a new show (template driven form):</h3>
-<app-new-show-template-form />
+<!-- <h3>add a new show (template driven form):</h3>
+<app-new-show-template-form /> -->
+
+<h3>New show (reactive form):</h3>
+<app-new-show-reactive-form />
 
 <h1>{{ loading ? "Loading..." : "" }}</h1>
 <span style="color: red" *ngIf="error">{{ error }}</span>

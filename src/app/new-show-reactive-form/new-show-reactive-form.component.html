@@ -1,0 +1,15 @@
+<form [formGroup]="newShowGroup" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" required name="title" formControlName="title" />
+    <div [hidden]="!newShowGroup.get('title')?.errors">oups title requis</div>
+  </div>
+  <label for="title">Description:</label>
+  <textarea
+    required
+    name="description"
+    formControlName="description"
+  ></textarea>
+
+  <button [disabled]="!newShowGroup.valid" type="submit">submit</button>
+</form>
