@@ -11,6 +11,7 @@ import {
   selector: 'app-new-show',
   templateUrl: './new-show.component.html',
   styleUrls: ['./new-show.component.css'],
+  standalone: true,
 })
 export class NewShowComponent {
   @Input() title: string = '';

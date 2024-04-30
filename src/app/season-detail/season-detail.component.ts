@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TvshowsService } from '../tvshows.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-season-detail',
   templateUrl: './season-detail.component.html',
   styleUrls: ['./season-detail.component.css'],
+  imports: [CommonModule],
 })
 export class SeasonDetailComponent implements OnInit {
   espiodes: any[] = [];

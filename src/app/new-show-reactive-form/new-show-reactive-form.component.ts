@@ -1,10 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
+  standalone: true,
   selector: 'app-new-show-reactive-form',
   templateUrl: './new-show-reactive-form.component.html',
   styleUrls: ['./new-show-reactive-form.component.css'],
+  imports: [ReactiveFormsModule],
 })
 export class NewShowReactiveFormComponent implements OnInit {
   description = new FormControl('new show description');

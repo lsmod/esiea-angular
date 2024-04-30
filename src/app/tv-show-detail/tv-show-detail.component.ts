@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { TvshowsService } from '../tvshows.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   selector: 'app-tv-show-detail',
   templateUrl: './tv-show-detail.component.html',
   styleUrls: ['./tv-show-detail.component.css'],
+  imports: [RouterLink, CommonModule],
 })
 export class TvShowDetailComponent implements OnInit {
   tvShow: any;

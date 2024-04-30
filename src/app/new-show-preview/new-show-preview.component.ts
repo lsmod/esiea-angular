@@ -1,9 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-new-show-preview',
   templateUrl: './new-show-preview.component.html',
   styleUrls: ['./new-show-preview.component.css'],
+  imports: [CommonModule],
 })
 export class NewShowPreviewComponent implements OnChanges {
   @Input() title: string = '';
