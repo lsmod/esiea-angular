@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { tvshows as hardcodedTvShow } from './tvshows';
 import { episodes } from './episodes';
 import { seasons } from './seasons';
 import { HttpClient } from '@angular/common/http';
@@ -8,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class TvshowsService {
-  private tvShows = hardcodedTvShow;
+  private tvShows: any[] = [];
   private selectedTvShow = null;
 
   constructor(private readonly httpClient: HttpClient) {}
