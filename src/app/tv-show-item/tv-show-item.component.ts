@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TvshowsService } from '../tvshows.service';
+import { TvShowModel } from '../model/TvShow';
 
 @Component({
   selector: 'app-tv-show-item',
@@ -7,11 +8,5 @@ import { TvshowsService } from '../tvshows.service';
   styleUrls: ['./tv-show-item.component.css'],
 })
 export class TvShowItemComponent {
-  @Input() tvShow: any;
-
-  constructor(private readonly tvShowService: TvshowsService) {}
-
-  onClick() {
-    this.tvShowService.setSelectedShow(this.tvShow);
-  }
+  @Input() tvShow!: TvShowModel;
 }

@@ -1,29 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TvshowsService } from '../tvshows.service';
+import { TvShowModel } from '../model/TvShow';
 
 @Component({
   selector: 'app-tv-show-list',
   templateUrl: './tv-show-list.component.html',
   styleUrls: ['./tv-show-list.component.css'],
 })
-export class TvShowListComponent {
-  tvShows: any[] = [];
+export class TvShowListComponent implements OnInit, OnDestroy {
+  tvShows: TvShowModel[] = [];
   error: string | null = null;
   loading = true;
   constructor(public readonly service: TvshowsService) {}
 
   // called when the component is initialized
   ngOnInit(): void {
-    this.service
-      .getTvShows()
-      .then((data: any) => {
-        this.tvShows = data;
-        this.loading = false;
-      })
-      .catch((error) => {
-        this.error = error.message;
-        this.loading = false;
-      });
+    console.log('ngOnInit');
+    this.service.getTvShows().subscribe((shows) => {
+      this.tvShows = shows;
+      this.loading = false;
+    });
+  }
+
+  ngOnDestroy(): void {
+    console.log('ngOnDestroy');
   }
 }

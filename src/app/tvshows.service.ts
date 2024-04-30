@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { episodes } from './episodes';
 import { seasons } from './seasons';
 import { HttpClient } from '@angular/common/http';
+import { TvShowModel } from './model/TvShow';
 
 @Injectable({
   providedIn: 'root',
@@ -12,8 +13,14 @@ export class TvshowsService {
 
   constructor(private readonly httpClient: HttpClient) {}
 
-  async getTvShows() {
-    return this.httpClient.get('https://api.tvmaze.com/shows').toPromise();
+  getTvShows() {
+    const observable = this.httpClient.get<TvShowModel[]>(
+      'https://api.tvmaze.com/shows'
+    );
+    observable.subscribe((shows) => {
+      this.tvShows = shows;
+    });
+    return observable;
   }
 
   getSeasons(tvShowId: number) {
