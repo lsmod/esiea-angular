@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./tv-show-detail.component.css'],
 })
 export class TvShowDetailComponent implements OnInit {
-  // service.getTvShowById(id)
   tvShow: any;
   seasons: any[] = [];
 
