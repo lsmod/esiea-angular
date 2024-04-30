@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { tvshows as hardcodedTvShow } from './tvshows';
 import { episodes } from './episodes';
 import { seasons } from './seasons';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -10,10 +11,10 @@ export class TvshowsService {
   private tvShows = hardcodedTvShow;
   private selectedTvShow = null;
 
-  getTvShows() {
-    // TODO: make an API call instead of returning hardcoded array
-    // (GET https://api.tvmaze.com/shows)
-    return this.tvShows;
+  constructor(private readonly httpClient: HttpClient) {}
+
+  async getTvShows() {
+    return this.httpClient.get('https://api.tvmaze.com/shows').toPromise();
   }
 
   getSeasons(tvShowId: number) {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { TvshowsService } from '../tvshows.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class TvShowListComponent {
 
   constructor(public readonly service: TvshowsService) {}
 
+  // called when the component is initialized
   ngOnInit(): void {
-    this.tvShows = this.service.getTvShows();
+    this.service.getTvShows().then((data: any) => {
+      this.tvShows = data;
+    });
   }
 }

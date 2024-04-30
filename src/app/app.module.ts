@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { SeasonDetailComponent } from './season-detail/season-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Route[] = [
   { path: '', component: TvShowListComponent },
@@ -35,6 +36,7 @@ const routes: Route[] = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
     MatChipsModule,
