@@ -11,11 +11,16 @@ import { TvShowModel } from '../model/TvShow';
 export class TvShowListComponent implements OnInit, OnDestroy {
   tvShows: TvShowModel[] = [];
   error: string | null = null;
+  interval: any;
   loading = true;
   constructor(public readonly service: TvshowsService) {}
 
   // called when the component is initialized
   ngOnInit(): void {
+    this.interval = setInterval(() => {
+      console.log('interval');
+    }, 1000);
+
     console.log('ngOnInit');
     this.service.getTvShows().subscribe((shows) => {
       this.tvShows = shows;
@@ -25,5 +30,6 @@ export class TvShowListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     console.log('ngOnDestroy');
+    clearInterval(this.interval);
   }
 }
