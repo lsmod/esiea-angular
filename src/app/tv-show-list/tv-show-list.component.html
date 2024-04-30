@@ -1,5 +1,8 @@
 <h2>Tv-Shows:</h2>
 
+<h1>{{ loading ? "Loading..." : "" }}</h1>
+<span style="color: red" *ngIf="error">{{ error }}</span>
+
 <mat-grid-list cols="3">
   <mat-grid-tile *ngFor="let show of tvShows">
     <app-tv-show-item [tvShow]="show"></app-tv-show-item>
