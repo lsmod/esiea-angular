@@ -16,6 +16,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { SeasonDetailComponent } from './season-detail/season-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { routes } from './routes';
+import { NewShowComponent } from './new-show/new-show.component';
+import { NewShowPreviewComponent } from './new-show-preview/new-show-preview.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { routes } from './routes';
     TvShowListComponent,
     TvShowDetailComponent,
     SeasonDetailComponent,
+    NewShowComponent,
+    NewShowPreviewComponent,
   ],
   imports: [
     BrowserModule,

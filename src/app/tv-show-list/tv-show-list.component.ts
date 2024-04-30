@@ -13,6 +13,8 @@ export class TvShowListComponent implements OnInit, OnDestroy {
   error: string | null = null;
   interval: any;
   loading = true;
+  newTitle = 'nouveau';
+
   constructor(public readonly service: TvshowsService) {}
 
   // called when the component is initialized

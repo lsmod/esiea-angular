@@ -1,5 +1,8 @@
 <h2>Tv-Shows:</h2>
 
+<app-new-show [(title)]="newTitle" />
+<app-new-show-preview [title]="newTitle" />
+
 <h1>{{ loading ? "Loading..." : "" }}</h1>
 <span style="color: red" *ngIf="error">{{ error }}</span>
 
