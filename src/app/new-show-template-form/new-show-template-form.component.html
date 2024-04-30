@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()">
+  <input [(ngModel)]="name" required minlength="3" name="name" />
+  <textarea [(ngModel)]="description" required name="description"></textarea>
+
+  <button type="submit">Submit</button>
+</form>

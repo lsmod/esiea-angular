@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { routes } from './routes';
 import { NewShowComponent } from './new-show/new-show.component';
 import { NewShowPreviewComponent } from './new-show-preview/new-show-preview.component';
+import { NewShowTemplateFormComponent } from './new-show-template-form/new-show-template-form.component';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { NewShowPreviewComponent } from './new-show-preview/new-show-preview.com
     SeasonDetailComponent,
     NewShowComponent,
     NewShowPreviewComponent,
+    NewShowTemplateFormComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
