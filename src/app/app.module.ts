@@ -15,15 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { SeasonDetailComponent } from './season-detail/season-detail.component';
 import { HttpClientModule } from '@angular/common/http';
-
-const routes: Route[] = [
-  { path: '', component: TvShowListComponent },
-  { path: 'tshow-details/:id', component: TvShowDetailComponent },
-  {
-    path: 'tvshow-details/:tvShowId/season/:seasonId',
-    component: SeasonDetailComponent,
-  },
-];
+import { routes } from './routes';
 
 @NgModule({
   declarations: [
